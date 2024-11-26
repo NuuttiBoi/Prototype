@@ -53,7 +53,7 @@ public class HelloController {
 
      */
     public void handleView(){
-        Recommendation recommendation = (Recommendation) recommendationList.getSelectionModel().getSelectedItem();
+        Recommendation recommendation = recommendationList.getSelectionModel().getSelectedItem();
         try{
             openNewScene(recommendation);
         } catch (IOException e) {
@@ -81,7 +81,7 @@ public class HelloController {
     }
 
     public void handleClone(){
-        Recommendation recommendation = (Recommendation) recommendationList.getSelectionModel().getSelectedItem();
+        Recommendation recommendation = recommendationList.getSelectionModel().getSelectedItem();
         Recommendation clonedRecommendation = recommendation.clone();
         addRecommendation(clonedRecommendation);
         Alert alert = new Alert(Alert.AlertType.INFORMATION);

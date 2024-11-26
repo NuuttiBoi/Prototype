@@ -14,24 +14,21 @@ public class RecommendationViewController {
     public ListView bookListView;
     public TextField authorText, titleText, genreText, yearText;
     public Text targetAudienceText, nameText;
-    private HelloController helloController;
     private List<Book> bookList = new ArrayList<>();
     private Recommendation recommendation;
 
     @FXML
     public void initialize(Recommendation recommendation){
-        helloController = new HelloController();
         this.recommendation = recommendation;
         bookList = recommendation.getBookList();
         System.out.println(bookList);
         bookListView.getItems().addAll(bookList);
         nameText.setText(recommendation.getName());
-        targetAudienceText.setText("Target Audience: " +recommendation.getTargetAudience());
+        targetAudienceText.setText("Target Audience: " + recommendation.getTargetAudience());
     }
     public void handleAdd(){
         Book newBook = new Book(authorText.getText(), titleText.getText(), genreText.getText(), Integer.parseInt(yearText.getText()));
         recommendation.addBook(newBook);
-        bookList.add(newBook);
         bookListView.getItems().add(newBook);
     }
     public void handleRemove(){
