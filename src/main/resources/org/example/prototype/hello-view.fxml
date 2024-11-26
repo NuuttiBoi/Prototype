@@ -5,6 +5,7 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="org.example.prototype.HelloController">
     <padding>
@@ -12,5 +13,7 @@
     </padding>
 
     <Label fx:id="welcomeText"/>
+    <ListView fx:id="bookList"/>
+    <ListView fx:id="recommendationList"/>
     <Button text="Hello!" onAction="#onHelloButtonClick"/>
 </VBox>
