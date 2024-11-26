@@ -8,4 +8,6 @@ module org.example.prototype {
     exports org.example.prototype;
     exports org.example.prototype.controller;
     opens org.example.prototype.controller to javafx.fxml;
+    exports org.example.prototype.model;
+    opens org.example.prototype.model to javafx.fxml;
 }

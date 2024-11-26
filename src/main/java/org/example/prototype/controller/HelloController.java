@@ -5,30 +5,27 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextInputDialog;
 import javafx.stage.Stage;
-import org.example.prototype.Book;
-import org.example.prototype.Recommendation;
+import org.example.prototype.model.Book;
+import org.example.prototype.model.Recommendation;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class HelloController {
-    public ListView recommendationList;
-    private List<Book> booksList = new ArrayList<>();
-    private List<Recommendation> recommendations = new ArrayList<>();
-
     @FXML
-    public void initialize(){
-        Book book1 = new Book("George R.R. Martin","Game of Thrones","fantasy",1999);
-        booksList.add(book1);
-        //Book book2 = book1.clone();
-        //booksList.add(book2);
-        Recommendation recommendation = new Recommendation("Recommendation1","Fantasy fans",booksList);
+    public ListView<Recommendation> recommendationList;
+    private List<Recommendation> recommendations = new ArrayList<>();
+    private Recommendation recommendation;
+
+    public void initialize(Recommendation recommendation){
+        this.recommendation = recommendation;
+        System.out.println(recommendation);
         recommendations.add(recommendation);
+        System.out.println(recommendations);
         recommendationList.getItems().addAll(recommendations);
     }
     public void openNewScene(Recommendation recommendation) throws IOException {
@@ -37,6 +34,7 @@ public class HelloController {
         RecommendationViewController controller = fxmlLoader.getController();
         controller.initialize(recommendation);
         Scene scene = new Scene(layout);
+        scene.getStylesheets().add(getClass().getResource("/org/example/prototype/style.css").toExternalForm());
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.show();

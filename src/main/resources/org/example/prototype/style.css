@@ -1,0 +1,14 @@
+#name, #headerText{
+    -fx-font-size: 20;
+}
+#addButton{
+    -fx-background-color: darkgreen;
+    -fx-text-fill: white;
+}
+#removeButton{
+    -fx-background-color: darkred;
+    -fx-text-fill: white;
+}
+.button{
+    -fx-spacing:40;
+}

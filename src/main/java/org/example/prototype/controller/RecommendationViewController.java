@@ -1,10 +1,11 @@
 package org.example.prototype.controller;
 
+import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
-import org.example.prototype.Book;
-import org.example.prototype.Recommendation;
+import org.example.prototype.model.Book;
+import org.example.prototype.model.Recommendation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +18,7 @@ public class RecommendationViewController {
     private List<Book> bookList = new ArrayList<>();
     private Recommendation recommendation;
 
+    @FXML
     public void initialize(Recommendation recommendation){
         helloController = new HelloController();
         this.recommendation = recommendation;

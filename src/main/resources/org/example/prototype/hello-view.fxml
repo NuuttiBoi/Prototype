@@ -13,12 +13,12 @@
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
-    <Text>Recommendations</Text>
+    <Text id="headerText">Recommendations</Text>
     <ListView fx:id="recommendationList"/>
     <HBox>
-        <Button onAction="#handleAdd">Create New</Button>
-        <Button onAction="#handleView">View</Button>
-        <Button onAction="#handleClone">Clone</Button>
+        <Button id="addButton" onAction="#handleAdd">Create New</Button>
+        <Button id="viewButton" onAction="#handleView">View</Button>
+        <Button id="cloneButton" onAction="#handleClone">Clone</Button>
     </HBox>
 
 </VBox>

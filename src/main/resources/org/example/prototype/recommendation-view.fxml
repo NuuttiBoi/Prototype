@@ -9,19 +9,24 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="398.0" prefWidth="553.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.prototype.controller.RecommendationViewController">
-    <HBox prefHeight="354.0" prefWidth="500">
+<?import javafx.geometry.Insets?>
+<VBox alignment="CENTER" spacing="20" prefHeight="398.0" prefWidth="553.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.prototype.controller.RecommendationViewController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+    <HBox prefHeight="354.0" prefWidth="400" spacing="40">
       <VBox>
          <children>
-              <Text fx:id="nameText" text="vvv" />
+              <Text id="name" fx:id="nameText" text="vvv" />
               <Text fx:id="targetAudienceText" text="tttrr" />
               <Text text="Books In This Recommendation">Books In This Recommendation</Text>
-              <ListView fx:id="bookList" maxHeight="400" minHeight="100.0" minWidth="300" prefHeight="152.0" prefWidth="300" />
-              <Button onAction="#handleRemove">Remove</Button>
+              <ListView fx:id="bookListView" maxHeight="400" minHeight="100.0" minWidth="300" prefHeight="152.0" prefWidth="300" />
+              <Button id="removeButton" onAction="#handleRemove">Remove</Button>
+              <Button id="cloneButton" onAction="#handleClone">Clone</Button>
          </children>
       </VBox>
         <VBox prefHeight="319.0" prefWidth="194.0">
-            <Text>Add New Book To Recommendation</Text>
+            <Text id="headerText">Add New Book To Recommendation</Text>
             <Label>Author</Label>
             <TextField fx:id="authorText" />
             <Label>Title</Label>
@@ -30,8 +35,8 @@
             <TextField fx:id="genreText" />
             <Label>Publication Year</Label>
             <TextField fx:id="yearText" />
-            <Button onAction="#handleAdd">Add</Button>
+            <Button id="addButton" onAction="#handleAdd">Add</Button>
         </VBox>
     </HBox>
 
-</AnchorPane>
+</VBox>

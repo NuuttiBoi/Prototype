@@ -1,8 +1,9 @@
-package org.example.prototype;
+package org.example.prototype.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class Recommendation {
+public class Recommendation implements Cloneable{
     private String targetAudience, name;
     private List<Book> bookList;
 
@@ -18,8 +19,18 @@ public class Recommendation {
             this.bookList=target.bookList;
         }
     }
+    @Override
     public Recommendation clone(){
-        return new Recommendation(this);
+        try {
+            Recommendation cloned = (Recommendation) super.clone();
+            cloned.bookList = new ArrayList<>();
+            for (Book book : this.bookList) {
+                cloned.bookList.add(book.clone());
+            }
+            return cloned;
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError("Cloning not supported", e);
+        }
     }
     public void addBook(Book book){
         bookList.add(book);

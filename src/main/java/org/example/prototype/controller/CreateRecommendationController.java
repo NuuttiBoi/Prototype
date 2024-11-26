@@ -2,8 +2,8 @@ package org.example.prototype.controller;
 
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import org.example.prototype.Book;
-import org.example.prototype.Recommendation;
+import org.example.prototype.model.Book;
+import org.example.prototype.model.Recommendation;
 
 import java.util.ArrayList;
 import java.util.List;

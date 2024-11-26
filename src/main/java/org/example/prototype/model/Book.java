@@ -1,6 +1,6 @@
-package org.example.prototype;
+package org.example.prototype.model;
 
-public class Book {
+public class Book implements Cloneable{
     private String author, title, genre;
     private int publicationYear;
 
@@ -18,8 +18,13 @@ public class Book {
             this.publicationYear= target.publicationYear;
         }
     }
-    public Book clone(){
-        return new Book(this);
+    @Override
+    public Book clone() {
+        try {
+            return (Book) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError("Cloning not supported", e);
+        }
     }
     public String toString(){
         return this.author + " , " + this.title + " , " + this.publicationYear;
