@@ -19,7 +19,13 @@ public class Recommendation {
     public Recommendation clone(){
         return new Recommendation(this);
     }
+    public void addBook(Book book){
+        bookList.add(book);
+    }
+    public List<Book> getBookList(){
+        return bookList;
+    }
     public String toString(){
-        return targetAudience + ", books: " + bookList;
+        return targetAudience;
     }
 }

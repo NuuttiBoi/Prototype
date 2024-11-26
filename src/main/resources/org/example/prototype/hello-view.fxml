@@ -6,14 +6,19 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.HBox?>
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.example.prototype.HelloController">
+      fx:controller="org.example.prototype.controller.HelloController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
-
-    <Label fx:id="welcomeText"/>
-    <ListView fx:id="bookList"/>
+    <Text>Recommendations</Text>
     <ListView fx:id="recommendationList"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+    <HBox>
+        <Button onAction="#handleAdd">Create New</Button>
+        <Button onAction="#handleView">View</Button>
+        <Button onAction="#handleClone">Clone</Button>
+    </HBox>
+
 </VBox>
