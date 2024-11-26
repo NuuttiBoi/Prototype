@@ -18,15 +18,12 @@ public class CreateRecommendationController {
     private List<Book> booksList= new ArrayList<>();
     private Recommendation recommendation;
 
-    public void initialize(Recommendation recommendation){
+    public void initialize(){
         helloController = new HelloController();
-        this.recommendation = recommendation;
-        booksList = recommendation.getBookList();
         bookList.getItems().addAll(booksList);
     }
     public void handleAdd(){
         Book newBook = new Book(authorText.getText(), titleText.getText(), genreText.getText(), Integer.parseInt(yearText.getText()));
-        recommendation.addBook(newBook);
         booksList.add(newBook);
         bookList.getItems().add(newBook);
     }

@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62a7670e-479d-4f65-9518-656fbf487db8" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/prototype/controller/CreateRecommendationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/prototype/controller/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/prototype/controller/RecommendationViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/prototype/create-recommendation.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/prototype/recommendation-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/prototype/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/prototype/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/prototype/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/prototype/Recommendation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/prototype/Recommendation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/prototype/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/prototype/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/prototype/controller/CreateRecommendationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/prototype/controller/CreateRecommendationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/prototype/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/prototype/controller/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/prototype/controller/RecommendationViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/prototype/controller/RecommendationViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/prototype/recommendation-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/prototype/recommendation-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +64,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.example.prototype" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -83,7 +85,8 @@
       <option name="presentableId" value="Default" />
       <updated>1732620222301</updated>
       <workItem from="1732620223444" duration="2653000" />
-      <workItem from="1732626331508" duration="5324000" />
+      <workItem from="1732626331508" duration="6622000" />
+      <workItem from="1732634276160" duration="2772000" />
     </task>
     <task id="LOCAL−00001" summary="init">
       <option name="closed" value="true" />
@@ -99,7 +102,14 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1732626353138</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="init">
+      <option name="closed" value="true" />
+      <created>1732631736786</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1732631736786</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

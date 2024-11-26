@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextInputDialog;
 import javafx.stage.Stage;
 import org.example.prototype.Book;
 import org.example.prototype.Recommendation;
@@ -22,14 +23,12 @@ public class HelloController {
 
     @FXML
     public void initialize(){
-        Book book1 = new Book("George","Game of thrones","fantasy",1999);
+        Book book1 = new Book("George R.R. Martin","Game of Thrones","fantasy",1999);
         booksList.add(book1);
-        Book book2 = book1.clone();
-        booksList.add(book2);
-
-        Recommendation recommendation = new Recommendation("Fantasy fans",booksList);
+        //Book book2 = book1.clone();
+        //booksList.add(book2);
+        Recommendation recommendation = new Recommendation("Recommendation1","Fantasy fans",booksList);
         recommendations.add(recommendation);
-
         recommendationList.getItems().addAll(recommendations);
     }
     public void openNewScene(Recommendation recommendation) throws IOException {
@@ -42,16 +41,19 @@ public class HelloController {
         stage.setScene(scene);
         stage.show();
     }
-    public void openNewCreateScene(Recommendation recommendation) throws IOException {
+    /*
+    public void openCreateScene() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/org/example/prototype/create-recommendation.fxml"));
         Parent layout = fxmlLoader.load();
-        RecommendationViewController controller = fxmlLoader.getController();
-        controller.initialize(recommendation);
+        CreateRecommendationController controller = fxmlLoader.getController();
+        controller.initialize();
         Scene scene = new Scene(layout);
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.show();
     }
+
+     */
     public void handleView(){
         Recommendation recommendation = (Recommendation) recommendationList.getSelectionModel().getSelectedItem();
         try{
@@ -60,14 +62,26 @@ public class HelloController {
             throw new RuntimeException(e);
         }
     }
+    /*
     public void handleAdd(){
-        Recommendation recommendation = (Recommendation) recommendationList.getSelectionModel().getSelectedItem();
         try{
-            openNewScene(recommendation);
+            openCreateScene();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
+     */
+
+    public void handleAdd(){
+        TextInputDialog dialog = new TextInputDialog();
+        dialog.setTitle("Add a New Recommendation");
+        dialog.setContentText("Recommendation name");
+        dialog.showAndWait();
+        String recommendationName = dialog.getEditor().getText();
+        Recommendation recommendation = new Recommendation(recommendationName,"",new ArrayList<>());
+        addRecommendation(recommendation);
+    }
+
     public void handleClone(){
         Recommendation recommendation = (Recommendation) recommendationList.getSelectionModel().getSelectedItem();
         Recommendation clonedRecommendation = recommendation.clone();
